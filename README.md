@@ -12,6 +12,10 @@
 
 ---
 
+<img width="1878" height="521" alt="image" src="https://github.com/user-attachments/assets/4d3b2462-1cc7-442f-a5eb-95dcd73e02b9" />
+<img width="1878" height="521" alt="image" src="https://github.com/user-attachments/assets/06ca68d4-efaf-4071-b5f5-c7e70fdb91c7" />
+
+
 <a name="català"></a>
 ## 🏙️ Català
 
