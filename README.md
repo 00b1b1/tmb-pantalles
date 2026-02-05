@@ -46,6 +46,18 @@
     npm run build
     ```
 
+### 🔑 Configuració de l'API
+Aquest projecte requereix dades oficials de TMB. Per configurar-les:
+1.  **Obtenir credencials**: Registra't al portal de [TMB Developer](https://developer.tmb.cat/) i crea una aplicació per obtenir el teu `App Id` i `App Key`.
+2.  **Configurar variables d'entorn**:
+    *   Crea un arxiu `.env` a l'arrel del projecte.
+    *   Afegeix les teves claus seguint el format de `.env.example`:
+        ```env
+        VITE_TMB_APP_ID=el_teu_app_id
+        VITE_TMB_APP_KEY=la_teva_app_key
+        ```
+3.  **Seguretat**: L'arxiu `.env` està ignorat per Git per evitar que les teves claus es publiquin a GitHub.
+
 ### ⚙️ Customització
 El projecte és altament flexible i permet les següents configuracions:
 *   **Selecció d'Estació**: Totes les estacions de la xarxa de TMB (L1 a L11), incloent els ramals de la L9 i L10.
@@ -105,6 +117,18 @@ Les dades es recullen en temps real de les següents fonts:
     ```bash
     npm run build
     ```
+
+### 🔑 Configuración de la API
+Este proyecto requiere datos oficiales de TMB. Para configurarlos:
+1.  **Obtener credenciales**: Regístrate en el portal de [TMB Developer](https://developer.tmb.cat/) y crea una aplicación para obtener tu `App Id` y `App Key`.
+2.  **Configurar variables de entorno**:
+    *   Crea un archivo `.env` en la raíz del proyecto.
+    *   Añade tus claves siguiendo el formato de `.env.example`:
+        ```env
+        VITE_TMB_APP_ID=tu_app_id
+        VITE_TMB_APP_KEY=tu_app_key
+        ```
+3.  **Seguridad**: El archivo `.env` está ignorado por Git para evitar que tus claves se publiquen en GitHub.
 
 ### ⚙️ Personalización
 El proyecto es altamente flexible y permite las siguientes configuraciones:
