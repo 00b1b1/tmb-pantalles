@@ -169,7 +169,7 @@ Los datos se recogen en tiempo real de las siguientes fuentes:
 ---
 
 ## 👨‍💻 Crèdits
-Desenvolupat amb ❤️ per a la comunitat de transport de Barcelona per [Ahmed Bibi](https://x.com/b_1__b_1). No és una aplicació oficial de Transports Metropolitans de Barcelona (TMB).
+Desenvolupat amb el cor per a la comunitat de transport de Barcelona per [Ahmed Bibi](https://x.com/b_1__b_1). No és una aplicació oficial de Transports Metropolitans de Barcelona (TMB).
 
 ---
 
