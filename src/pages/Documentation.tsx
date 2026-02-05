@@ -59,10 +59,10 @@ export default function Documentation() {
                             </p>
                             <div className="bg-background/80 p-4 rounded-lg border font-mono text-xs break-all relative group">
                                 <code className="text-primary">
-                                    https://tmb-metro.vercel.app/?line=L4&station=428&direction=1&alerts=true
+                                    {window.location.origin}/?line=L4&station=428&direction=1&alerts=true
                                 </code>
                                 <button
-                                    onClick={() => copyToClipboard('https://tmb-metro.vercel.app/?line=L4&station=428&direction=1&alerts=true', 'example')}
+                                    onClick={() => copyToClipboard(`${window.location.origin}/?line=L4&station=428&direction=1&alerts=true`, 'example')}
                                     className="absolute top-2 right-2 p-2 bg-background rounded-md opacity-0 group-hover:opacity-100 transition-opacity hover:bg-muted"
                                     title="Copiar"
                                 >
@@ -207,14 +207,14 @@ export default function Documentation() {
                             </p>
                             <div className="bg-muted/50 p-4 rounded-lg font-mono text-xs border overflow-x-auto relative group">
                                 <pre className="text-foreground">{`<iframe 
-  src="https://tmb-metro.vercel.app/?line=L4&station=428&direction=1" 
+  src="${window.location.origin}/?line=L4&station=428&direction=1" 
   width="100%" 
   height="600" 
   frameborder="0"
   allow="fullscreen"
 ></iframe>`}</pre>
                                 <button
-                                    onClick={() => copyToClipboard(`<iframe src="https://tmb-metro.vercel.app/?line=L4&station=428&direction=1" width="100%" height="600" frameborder="0" allow="fullscreen"></iframe>`, 'iframe')}
+                                    onClick={() => copyToClipboard(`<iframe src="${window.location.origin}/?line=L4&station=428&direction=1" width="100%" height="600" frameborder="0" allow="fullscreen"></iframe>`, 'iframe')}
                                     className="absolute top-2 right-2 p-2 bg-background rounded-md opacity-0 group-hover:opacity-100 transition-opacity hover:bg-muted"
                                     title="Copiar"
                                 >
@@ -313,7 +313,7 @@ interface UrlExampleProps {
 }
 
 function UrlExample({ title, url, description, onCopy, copiedParam }: UrlExampleProps) {
-    const fullUrl = `https://tmb-metro.vercel.app/${url}`;
+    const fullUrl = `${window.location.origin}/${url}`;
     const paramId = `url-${title}`;
 
     return (
