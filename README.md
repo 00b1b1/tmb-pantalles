@@ -34,7 +34,7 @@
 ### 🚀 Instal·lació i Ús
 1.  **Clonar el repositori**:
     ```bash
-    git clone https://github.com/el-teu-usuari/tmb-metro.git
+    git clone https://github.com/00b1b1/tmb-metro.git
     cd tmb-metro
     ```
 2.  **Instal·lar dependències**:
@@ -106,7 +106,7 @@ Les dades es recullen en temps real de les següents fonts:
 ### 🚀 Instalación y Uso
 1.  **Clonar el repositorio**:
     ```bash
-    git clone https://github.com/tu-usuario/tmb-metro.git
+    git clone https://github.com/00b1b1/tmb-metro.git
     cd tmb-metro
     ```
 2.  **Instalar dependencias**:
