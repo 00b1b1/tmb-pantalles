@@ -1,11 +1,14 @@
 .metro-screen {
-    width: 1920px;
-    height: 520px;
+    width: 100%;
+    min-width: 1512px;
+    /* Minimum width to maintain layout integrity, matching MacBook logical width */
+    height: 540px;
     background-color: var(--tmb-white);
     position: relative;
     display: flex;
     overflow: hidden;
     flex-shrink: 0;
+    text-rendering: geometricPrecision;
 }
 
 .sidebar {
@@ -19,6 +22,7 @@
     padding-bottom: 34px;
     flex-shrink: 0;
     position: relative;
+    z-index: 5;
 }
 
 .logo-container {
@@ -28,7 +32,7 @@
 
 .clock-vertical {
     position: absolute;
-    top: 456px;
+    bottom: 30px;
     left: 15px;
     width: 119px;
     text-align: center;
@@ -36,6 +40,7 @@
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 0;
+    letter-spacing: 0.5px;
 }
 
 .main-content {
@@ -45,6 +50,7 @@
     padding: 0;
     position: relative;
     background-color: var(--tmb-white);
+    overflow: hidden;
 }
 
 .header {
@@ -79,14 +85,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 90px;
+    min-height: 90px;
+    max-width: calc(100% - 150px);
 }
 
 .direction-label {
     font-size: 32px;
     color: #000;
-    line-height: normal;
-    margin-bottom: 0;
+    line-height: 1;
+    /* More predictable spacing */
+    margin-bottom: 4px;
+    /* Tiny gap */
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -108,42 +117,48 @@
 .destination {
     font-size: 64px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
+    /* Increased to avoid vertical clipping */
     letter-spacing: -1.5px;
     white-space: nowrap;
     color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 4px;
+    /* Extra safety for descenders */
 }
 
 .timing-info {
     padding-left: 33px;
     display: flex;
+    flex-grow: 1;
 }
 
 .timing-info.classic {
     margin-top: 57px;
-    /* Matches Figma's train1 top (192) - header block height approx */
     padding-left: 33px;
 }
 
 .timing-info.classic .timing-column {
     flex-direction: row;
-    gap: 550px;
-    /* Gap between train 1 and train 2 based on Figma positions */
+    width: 100%;
+    gap: clamp(100px, 15vw, 450px);
+    /* Responsive gap for different widths */
     align-items: center;
 }
 
 .timing-info.classic .train-status {
     gap: 28px;
-    /* Matches Figma train gap between number and time */
 }
 
 .timing-info.with-alert {
-    margin-top: 30px;
+    margin-top: 40px;
+    /* Slight adjustment for Retina balance */
 }
 
 .timing-info.with-alert .timing-column {
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .timing-info.with-alert .train-status:nth-child(2) {
@@ -163,8 +178,10 @@
 .status-number {
     width: 80px;
     height: 80px;
-    background-color: rgba(217, 217, 217, 0.5);
-    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Sharper, cleaner look for Retina */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,7 +194,8 @@
     font-size: 164px;
     font-weight: 700;
     line-height: 1;
-    letter-spacing: -5px;
+    letter-spacing: -6px;
+    /* Slightly tighter for that Retina premium feel */
     color: #000;
 }
 
@@ -187,7 +205,7 @@
     top: 0;
     right: 0;
     width: 960px;
-    height: 520px;
+    height: 540px;
     z-index: 10;
     overflow: hidden;
 }
@@ -325,8 +343,9 @@
 }
 
 .loading-container {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+
+    align-items: left;
 }
 
 .loading-spinner {

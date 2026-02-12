@@ -5,14 +5,14 @@ export const APP_TEXTS = {
             es: 'Dirección',
             en: 'Direction'
         },
-        noData: 'Sense dades',
+        noData: 'Sense dades. Revisa la conexió',
         entering: 'Entra',
         attention: 'Atenció!',
         emergencyHelp: 'Si et trobes malament, utilitza els intèrfons de l’andana per demanar ajuda.'
     },
     configurator: {
         title: 'Configuració del panell',
-        loading: 'Carregant dades...',
+        loading: 'Esperant informació...',
         lineAndStation: 'Línia i Estació',
         selectStation: 'Selecciona estació',
         directionSense: 'Sentit',
@@ -21,7 +21,7 @@ export const APP_TEXTS = {
         emergencyAlertLabel: "Avís d'ajuda (Interfons)",
         customAlerts: 'Alertes Personalitzades',
         addNew: '+ Afegir Nova',
-        apiTitle: 'API Pública',
+        shareTitle: 'Compartir',
         generateLink: 'Generar Enllaç',
         copyLink: 'Copiar Enllaç',
         copied: 'Copiat!',
@@ -39,9 +39,9 @@ export const APP_TEXTS = {
         credits: 'Informació legal i crèdits'
     },
     docs: {
-        title: 'API Pública',
+        title: 'Documentació',
         close: 'Tancar',
-        introTitle: 'Benvingut a l’API de MetroScreen',
+        introTitle: 'Benvingut a l’API de TMB Pantalles',
         introDesc: 'Aquesta API et permet preconfigurar i compartir pantalles d’informació del metro de Barcelona de manera senzilla mitjançant paràmetres URL.',
         parametersTitle: 'Paràmetres de la URL',
         examplesTitle: 'Exemples d’ús'

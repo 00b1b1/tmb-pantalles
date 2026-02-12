@@ -92,7 +92,7 @@ Les dades es recullen en temps real de les següents fonts:
 ## 🏙️ Español
 
 ### 📌 Descripción
-**MetroScreen** es una réplica digital de alta fidelidad de las pantallas de información en tiempo real del **Metro de Barcelona (TMB)**. Diseñada para ser utilizada en monitores de viviendas, oficinas o negocios, ofreciendo una experiencia visual prémium y 100% funcional.
+**TMB Pantalles** es una réplica digital de alta fidelidad de las pantallas de información en tiempo real del **Metro de Barcelona (TMB)**. Diseñada para ser utilizada en monitores de viviendas, oficinas o negocios, ofreciendo una experiencia visual prémium y 100% funcional.
 
 ### ✨ Características Principales
 *   **📡 Tiempo Real**: Conexión directa con la API oficial de TMB para horarios exactos.

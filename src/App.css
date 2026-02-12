@@ -4,27 +4,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background: radial-gradient(circle at center, #18181b 0%, #09090b 100%);
     overflow: hidden;
     position: relative;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .canvas-container {
     position: relative;
-    width: 1920px;
-    height: 520px;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 2560px;
+    /* Allow expansion for ultra-wide */
+    height: 540px;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    /* Added slight border for Retina definition */
     border-radius: 8px;
     overflow: hidden;
     transform-origin: center;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    transform-style: preserve-3d;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .app-wrapper {
-        padding: 10px;
+        padding: 0;
     }
 
     .canvas-container {

@@ -45,16 +45,20 @@ export default function Home() {
             const wrapperWidth = wrapper.clientWidth
             const wrapperHeight = wrapper.clientHeight
 
-            // Original dimensions
-            const originalWidth = 1920
-            const originalHeight = 520
+            // Base dimensions for scaling logic
+            const originalHeight = 540
+            const minWidth = 1512 // Should match min-width in MetroScreen.css
 
-            // Calculate scale based on available width (accounting for padding)
-            const scaleX = wrapperWidth / originalWidth
-            const scaleY = wrapperHeight / originalHeight
+            // We calculate scale based on height primarily, since width is now flexible
+            // However, we still check width to ensure we don't overflow on very narrow screens
+            const scaleY = (wrapperHeight - 2) / originalHeight
+            const scaleX = (wrapperWidth - 2) / minWidth
 
-            // Use the smaller scale to ensure it fits
-            const scale = Math.min(scaleX, scaleY)
+            // Use the smaller scale to ensure it fits, but cap it at 1.0 for desktop
+            let scale = Math.min(scaleX, scaleY)
+
+            // On Retina/High-res, keep it at 1.0 or scale down if needed
+            if (scale > 1) scale = 1
 
             canvasRef.current.style.transform = `scale(${scale})`
         }

@@ -266,7 +266,7 @@ export default function MetroScreen({
                                                 {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
                                                     <circle key={i} cx="50" cy="15" r="6" fill="#000" opacity={1 - (i * 0.12)} transform={`rotate(${angle} 50 50)`} />
                                                 ))}
-                                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="1s" repeatCount="indefinite" />
+                                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
                                             </g>
                                         </svg>
                                     </div>
@@ -288,7 +288,7 @@ export default function MetroScreen({
                                                 {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
                                                     <circle key={i} cx="50" cy="15" r="6" fill="#000" opacity={1 - (i * 0.12)} transform={`rotate(${angle} 50 50)`} />
                                                 ))}
-                                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="1s" repeatCount="indefinite" />
+                                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
                                             </g>
                                         </svg>
                                     </div>

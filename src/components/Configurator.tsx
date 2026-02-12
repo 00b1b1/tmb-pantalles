@@ -271,7 +271,22 @@ export default function Configurator({ onConfigChange, currentConfig }: Configur
 
                     <div className="flex-1 p-6 overflow-y-auto space-y-8">
                         {loading ? (
-                            <p className="text-muted-foreground text-center">{APP_TEXTS.configurator.loading}</p>
+                            <div className="loading-container">
+                                <div className="loading-spinner">
+                                    <svg width="40" height="40  " viewBox="0 0 100 100">
+                                        <g>
+                                            {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+                                                <circle key={i} cx="50" cy="15" r="6" fill="#000" opacity={1 - (i * 0.12)} transform={`rotate(${angle} 50 50)`} />
+                                            ))}
+                                            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite" />
+
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p className="text-muted-foreground text-center">{APP_TEXTS.configurator.loading}</p>
+                            </div>
+
+
                         ) : (
                             <>
                                 {/* Selection Section */}
@@ -450,7 +465,7 @@ export default function Configurator({ onConfigChange, currentConfig }: Configur
 
                                 {/* API Link Generator */}
                                 <div className="space-y-4 pt-4 border-t">
-                                    <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">{APP_TEXTS.configurator.apiTitle}</label>
+                                    <label className="text-sm font-bold uppercase tracking-wider text-muted-foreground">{APP_TEXTS.configurator.shareTitle}</label>
                                     <div className="space-y-3">
                                         <button
                                             onClick={() => {
